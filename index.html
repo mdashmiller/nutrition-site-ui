@@ -8,16 +8,38 @@
   <link rel="stylesheet" href="./app.css">
 </head>
 <body>
-  <a href="#mainContent">Skip to main content</a>
-  <header>
-    <a href="/">Nutrition</a>
-    <button>Open search</button>
-    <form action="">
-      <label for="globalSearch">Search the Nutrition website</label>
-      <input type="search" id="globalSearch" placeholder="Avacados, turmeric, kale, etc.">
-      <button type="submit">Search</button>
+  <a class="t-copy-large skip-nav" href="#mainContent">Skip to Main Content</a>
+
+  <!-- Header -->
+  <header class="header">
+    <a class="t-brand brand" href="/">Nutrition</a>
+    <!-- Search -->
+    <button class="button-icon">
+      <span class="screen-reader-only">
+        Open search
+      </span>
+      <svg class="button-icon__icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15.707 15l5.657 5.657-.707.707L15 15.707l.707-.707z"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M10 17a7 7 0 1 0 0-14 7 7 0 0 0 0 14zm0 1a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"/>
+      </svg>
+    </button>
+    <form class="search" action="">
+      <label class="screen-reader-only" for="globalSearch">
+        Search the Nutrition website
+      </label>
+      <input class="t-body search__input" type="search" id="globalSearch" placeholder="Avacados, turmeric, kale, etc.">
+      <button class="button-icon search__submit" type="submit">
+        <span class="screen-reader-only">
+          Search
+        </span>
+        <svg class="button-icon__icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15.707 15l5.657 5.657-.707.707L15 15.707l.707-.707z"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M10 17a7 7 0 1 0 0-14 7 7 0 0 0 0 14zm0 1a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"/>
+        </svg>
+      </button>
     </form>
-    <nav>
+    <!-- Nav -->
+    <nav class="screen-reader-only">
       <a href="/health">Health</a>
       <a href="/food">Food</a>
       <a href="/low-carb">Low Carb</a>
@@ -57,6 +79,8 @@
       </div>
     </nav>
   </header>
+
+  <!-- Main -->
   <main id="mainContent">
     <article>
       <h1>20 Types of Berries and Their Health Benefits</h1>
@@ -72,6 +96,7 @@
       </p>
       <img src="./assets/images/final/a-berry-full-glass-by-jess-watters-unsplash.jpg" alt="Blueberries in a bowl">
       <img src="./assets/images/final/chia-pudding-by-alex-loup-unsplash.jpg" alt="Chia seed pudding with blackberries and blueberries">
+      <!-- Nutrition Info Section -->
       <section>
         <h3>Nutrition Information</h3>
         <ul>
@@ -81,18 +106,23 @@
           <li>Protein: 2g</li>
         </ul>
       </section>
+      <!-- Social Links Section -->
       <section>
         <h3>Share this article</h3>
         <a href="http://facebook.com">Share on Facebook</a>
         <a href="http://twitter.com">Share on Twitter</a>
       </section>
     </article>
+
+    <!-- Related Articles -->
     <aside>
       <section>
         <h2>Related Articles</h2>
         <a href="/15-low-sugar-fruits">15 Low-Sugar Fruits High in Polyphenols</a>
         <a href="/15-low-carb-fruits">15 Best Low Carb Fruits</a>
       </section>
+
+      <!-- Article Section Selector -->
       <section>
         <h2>Choose Article Section</h2>
         <p>You are viewing section 03 of 20</p>
