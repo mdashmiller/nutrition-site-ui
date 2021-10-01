@@ -446,3 +446,65 @@ icon 1 px early but at least not both simultaneously*/
 .menu {
   display: none;
 }
+.menu--is-open {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-white);
+  box-shadow: -0.4rem 0 4rem 0 rgba(40, 51, 66, 0.3);
+  overflow-y: auto;
+  padding-bottom: var(--space-quad);
+}
+@media (max-width: 575px) {
+  .menu--is-open {
+    padding-right: var(--space-double);
+    padding-left: var(--space-double);
+    width: 28.8rem;
+  }
+}
+@media (min-width: 576px) {
+  .menu--is-open {
+    padding-right: var(--space-quad);
+    padding-left: var(--space-quad);
+    width: 34.4rem;
+  }
+}
+@media (max-width: 1024px) {
+  .menu--is-open {
+    padding-top: 0.8rem;
+  }
+}
+@media (min-width: 1025px) {
+  .menu--is-open {
+    padding-top: 4rem;
+  }
+}
+
+.menu__close {
+
+}
+
+.menu__close__icon {
+  margin-right: var(--space-default);
+}
+
+.menu__overlay {
+  display: none;
+}
+.menu__overlay--is-shown {
+  padding: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-charcoal-021);
+  opacity: 0.4;
+  border: none;
+}

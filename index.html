@@ -24,7 +24,7 @@
         <path fill-rule="evenodd" clip-rule="evenodd" d="M10 17a7 7 0 1 0 0-14 7 7 0 0 0 0 14zm0 1a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"/>
       </svg>
     </button>
-    <form class="search search--is-open" action="">
+    <form class="search" action="">
       <label class="screen-reader-only" for="globalSearch">
         Search the Nutrition website
       </label>
@@ -67,8 +67,14 @@
         <path d="M16 20h36v2H16zM0 2h36v2H0z"/>
       </svg>
     </button>
-    <nav class="menu">
-      <button>Close menu</button>
+    <nav class="menu menu--is-open">
+      <button class="button-icon menu__close">
+        <svg class="button-icon__icon menu__close__icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="presentation">
+          <path d="M12 10.222L5.778 4 4 5.778 10.222 12 4 18.222 5.778 20 12 13.778 18.222 20 20 18.222 13.778 12 20 5.778 18.222 4 12 10.222z"/>
+        </svg>
+        <span class="screen-reader-only">Close </span>
+        <span class="t-copy-large">Menu</span>
+      </button>
       <ul>
         <li>
           <a href="/">Home</a>
@@ -99,6 +105,9 @@
       <a href="http://facebook.com">Facebook</a>
       <a href="http://twitter.com">Twitter</a>
     </nav>
+    <button class="menu__overlay menu__overlay--is-shown" aria-hidden="true">
+      <span class="screen-reader-only">Close menu</span>
+    </button>
   </header>
 
   <!-- Main -->
