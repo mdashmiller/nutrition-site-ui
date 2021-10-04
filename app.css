@@ -212,12 +212,12 @@ body {
   outline: 0.4rem solid transparent;
   outline-offset: 0.2rem;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
   .skip-nav {
     transform: translate(var(--space-default), calc(var(--space-quad) * -1));
   }
 }
-@media (min-width: 1025px) {
+@media (min-width: 1026px) {
   .skip-nav {
     transform: translate(var(--space-oct), calc(var(--space-quad) * -1));
   }
@@ -280,15 +280,17 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1024.7px) {
   .header {
+    margin-bottom: var(--space-double);
     padding-right: var(--space-default);
     padding-left: var(--space-default);
     min-height: var(--space-quad);
   }
 }
-@media (min-width: 1025px) {
+@media (min-width: 1024.8px) {
   .header {
+    margin-bottom: var(--space-quad);
     padding-right: var(--space-oct);
     padding-left: var(--space-oct);
     min-height: var(--space-oct);
@@ -389,7 +391,7 @@ menu-trigger__icon--small and --large for similar issue */
   align-items: center;
 }
 
-@media (max-width: 786px) {
+@media (max-width: 787px) {
   .center-nav {
     display: none;
   }
@@ -458,7 +460,7 @@ icon 1 px early but at least not both simultaneously*/
   overflow-y: auto;
   padding-bottom: var(--space-quad);
 }
-@media (max-width: 575px) {
+@media (max-width: 576px) {
   .menu--is-open {
     padding-right: var(--space-double);
     padding-left: var(--space-double);
@@ -483,12 +485,60 @@ icon 1 px early but at least not both simultaneously*/
   }
 }
 
-.menu__close {
-
+@media (max-width: 576px){
+  .menu__close {
+    margin-bottom: var(--space-quad);
+  }
+}
+@media (min-width: 576px){
+  .menu__close {
+    margin-bottom: var(--space-oct);
+  }
 }
 
 .menu__close__icon {
   margin-right: var(--space-default);
+}
+
+.menu__items {
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+}
+@media (max-width: 576px) {
+  .menu__items {
+    margin-bottom: var(--space-quad);
+  }
+}
+@media (min-width: 576px) {
+  .menu__items {
+    margin-bottom: var(--space-oct);
+  }
+}
+
+.menu__item {
+  margin-bottom: var(--space-double);
+}
+@media (min-width: 786.5px) {
+  .menu__item--mobile-only {
+    display: none;
+  }
+}
+
+.menu__socials {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.menu__social {
+  margin-left: var(--space-default);
+  border-radius: 50%;
+  border: 0.2rem solid var(--color-charcoal-046);
+}
+
+.menu__social-cta {
+  color: var(--color-charcoal-046);
 }
 
 .menu__overlay {
