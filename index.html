@@ -38,9 +38,17 @@
           <path fill-rule="evenodd" clip-rule="evenodd" d="M10 17a7 7 0 1 0 0-14 7 7 0 0 0 0 14zm0 1a8 8 0 1 0 0-16 8 8 0 0 0 0 16z"/>
         </svg>
       </button>
+      <button class="button-icon search__close" type="button">
+        <span class="screen-reader-only">
+          Close the search form
+        </span>
+        <svg class="button-icon__icon search__close__icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="presentation">
+          <path d="M12 10.222L5.778 4 4 5.778 10.222 12 4 18.222 5.778 20 12 13.778 18.222 20 20 18.222 13.778 12 20 5.778 18.222 4 12 10.222z"/>
+        </svg>
+      </button>
     </form>
     <!-- Center Nav -->
-    <nav class="center-nav">
+    <nav class="center-nav" aria-label="Top navigation links">
       <ul class="center-nav__items">
         <li class="center-nav__item">
           <a class="t-link" href="/food">Food</a>
@@ -67,7 +75,7 @@
         <path d="M16 20h36v2H16zM0 2h36v2H0z"/>
       </svg>
     </button>
-    <nav class="menu">
+    <nav class="menu" aria-label="Global menu">
       <button class="button-icon menu__close">
         <svg class="button-icon__icon menu__close__icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="presentation">
           <path d="M12 10.222L5.778 4 4 5.778 10.222 12 4 18.222 5.778 20 12 13.778 18.222 20 20 18.222 13.778 12 20 5.778 18.222 4 12 10.222z"/>
@@ -152,8 +160,8 @@
       >
       <div class="article__supporting">
         <!-- Nutrition Info Section -->
-        <section>
-          <h3 class="screen-reader-only">Nutrition Information</h3>
+        <section aria-labelledby="nutritionInfo">
+          <h3 class="screen-reader-only" id="nutritionInfo">Nutrition Information</h3>
           <ul class="nutrition__items">
             <li class="t-copy-fluid nutrition__item">
               Calories:
@@ -174,8 +182,8 @@
           </ul>
         </section>
         <!-- Social Links Section -->
-        <section class="socials article__share">
-          <h3 class="t-copy-large social__cta">
+        <section class="socials article__share" aria-labelledby="articleShare">
+          <h3 class="t-copy-large social__cta" id="articleShare">
             Share<span class="screen-reader-only"> this article</span>
           </h3>
           <a class="button-icon social" href="http://facebook.com">
@@ -196,8 +204,8 @@
 
     <!-- Related Articles -->
     <aside class="aside">
-      <section class="related-articles">
-        <h2 class="screen-reader-only">Related Articles</h2>
+      <section class="related-articles" aria-labelledby="relatedArticles">
+        <h2 class="screen-reader-only" id="relatedArticles">Related Articles</h2>
         <a class="t-title card card--featured" href="/15-low-sugar-fruits">
           <span class="card__title">15 Low-Sugar Fruits High in Polyphenols</span>
           <div class="card__arrow card__arrow--small">
@@ -227,8 +235,8 @@
       </section>
 
       <!-- Article Section Selector -->
-      <section class="section-selector">
-        <h2 class="screen-reader-only">Choose Article Section</h2>
+      <section class="section-selector" aria-labelledby="sectionSelector">
+        <h2 class="screen-reader-only" id="sectionSelector">Choose Article Section</h2>
         <p class="section-selector__section-number">
           <span class="screen-reader-only">You are viewing section </span>
           <span class="t-section-number">03</span>
