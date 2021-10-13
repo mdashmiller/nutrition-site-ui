@@ -319,7 +319,7 @@ body {
 }
 
 /* Search */
-.search {
+.search:not(.search--is-open) {
   display: none;
 }
 .search--is-open {
@@ -338,10 +338,6 @@ body {
     width: 28rem;
   }
 }
-/* ??? This querie disappears at width 1199 */
-/* Possibly a browser math rounding issue -- see also 
-menu-trigger__icon--small and --large for similar issue */
-/* max-width was changed from 1199 to 1200 to make it work */
 @media (min-width: 786px) and (max-width: 1200px) {
   .search--is-open {
     width: 44rem;
@@ -461,16 +457,7 @@ menu-trigger__icon--small and --large for similar issue */
 }
 
 /* Menu */
-
-/* with syntactically correct media queires both the large and small icons were 
-showing at width of 575px */
-/* changing the min-width to start hiding the small icon down to 575 shows the large
-icon 1 px early but at least not both simultaneously*/
 @media (max-width: 575px) {
-  .menu-trigger__icon--large {
-    display: none;
-  }
-
   .menu-trigger__icon--small {
     margin-left: var(--space-half);
   }
@@ -479,19 +466,25 @@ icon 1 px early but at least not both simultaneously*/
   .menu-trigger__icon--small {
     display: none;
   }
-  
+}
+@media (max-width: 575px) {
+  .menu-trigger__icon--large {
+    display: none;
+  }
+}
+@media (min-width: 575px) {
   .menu-trigger__icon--large {
     margin-left: var(--space-default);
   }
 }
 
-.menu {
+.menu:not(.menu--is-open) {
   display: none;
 }
 .menu--is-open {
   display: block;
   position: fixed;
-  z-index: 1;
+  z-index: 3;
   top: 0;
   right: 0;
   bottom: 0;
@@ -565,7 +558,7 @@ icon 1 px early but at least not both simultaneously*/
   }
 }
 
-.menu__overlay {
+.menu__overlay:not(.menu__overlay--is-shown) {
   display: none;
 }
 .menu__overlay--is-shown {
@@ -574,6 +567,7 @@ icon 1 px early but at least not both simultaneously*/
   width: 100%;
   height: 100%;
   position: fixed;
+  z-index: 2;
   top: 0;
   right: 0;
   bottom: 0;
@@ -594,9 +588,14 @@ icon 1 px early but at least not both simultaneously*/
 }
 
 .social {
-  margin-left: var(--space-default);
   border-radius: 50%;
   border: 0.2rem solid var(--color-charcoal-046);
+}
+.social:not(:first-of-type) {
+  margin-left: var(--space-default);
+}
+.social:first-of-type {
+  margin-left: var(--space-double);
 }
 
 .social__cta {
@@ -606,24 +605,20 @@ icon 1 px early but at least not both simultaneously*/
 /* Main */
 @media (max-width: 1024.7px) {
   .main {
+    margin-bottom: var(--space-double);
     padding-right: var(--space-default);
     padding-left: var(--space-default);
+  }
+}
+@media (min-width: 1024.8px) {
+  .main {
+    margin-bottom: var(--space-quad);
   }
 }
 @media (min-width: 1024.8px) and (max-width: 1399.2px) {
   .main {
     padding-right: var(--space-oct);
     padding-left: var(--space-oct);
-  }
-}
-@media (max-width: 1024.7px) {
-  .main {
-    margin-bottom: var(--space-double);
-  }
-}
-@media (min-width: 1024.8px) {
-  .main {
-    margin-bottom: var(--space-quad);
   }
 }
 @media (min-width: 1399.3px) {
@@ -795,12 +790,6 @@ icon 1 px early but at least not both simultaneously*/
   color: var(--color-charcoal-046);
 }
 
-@media (max-width: 575.2px) {
-  .article__share {
-    margin-bottom: var(--space-double);
-  }
-}
-
 /* Aside */
 .aside {
   grid-area: aside;
@@ -822,7 +811,7 @@ icon 1 px early but at least not both simultaneously*/
 }
 @media (min-width: 1399.3px) {
   .related-articles {
-    margin-bottom: var(--space-oct);
+    margin-bottom: var(--space-quad);
   }
 }
 
@@ -879,6 +868,8 @@ icon 1 px early but at least not both simultaneously*/
     max-width: 36rem;
     height: 20rem;
   }
+}
+@media (min-width: 1399.3px) {
   .card:first-of-type {
     margin-bottom: var(--space-double);
   }
@@ -904,9 +895,6 @@ icon 1 px early but at least not both simultaneously*/
   border-radius: 50%;
 }
 @media (max-width: 1399.2px) {
-  .card__arrow--large {
-    display: none;
-  }
   .card__arrow--small {
     width: 3.2rem;
     height: 3.2rem;
@@ -916,6 +904,13 @@ icon 1 px early but at least not both simultaneously*/
   .card__arrow--small {
     display: none;
   }
+}
+@media (max-width: 1399.2px) {
+  .card__arrow--large {
+    display: none;
+  }
+}
+@media (min-width: 1399.3px) {
   .card__arrow--large {
     width: 4.8rem;
     height: 4.8rem;
